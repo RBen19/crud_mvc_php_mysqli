@@ -9,10 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-<button type="button" class="btn btn-outline-secondary"><a href="?action=ajouterCours" style="color: black">Ajouter Un Cours</a>
-</button>
-<button type="button" class="btn btn-outline-warning"><a href="?action=ajouterEtd" style="color: black">Ajouter Un Etudiant</a>
-</button>
+<div class="d-flex justify-content-around mt-5">
+    <button type="button" class="btn btn-outline-secondary"><a href="?action=ajouterCours" style="color: black" class="text-decoration-none">Ajouter Un Cours</a>
+    </button>
+    <button type="button" class="btn btn-outline-warning"><a href="?action=ajouterEtd" style="color: black" class="text-decoration-none">Ajouter Un Etudiant</a>
+    </button>
+</div>
 <div class="container mt-5">
 
 

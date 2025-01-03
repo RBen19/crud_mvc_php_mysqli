@@ -10,25 +10,27 @@
     <title>Document</title>
 </head>
 <body>
-<button type="button" class="btn btn-outline-secondary"><a href="?action=voirEtudiants">Voir la liste des Etudiants</a></button>
-
+<br>
+<div class="d-flex justify-content-left">
+<button type="button" class="btn btn-outline-secondary"><a href="?action=voirEtudiants" class="text-decoration-none text-black">Voir la liste des Etudiants</a></button>
+</div>
 <div class="container mt-5">
     <form action="?action=creerEtd" METHOD="post">
         <div class="mb-3">
             <label for="nom" class="form-label">Nom de L'étudiant</label>
-            <input type="text" class="form-control" name="nomEtd" >
+            <input type="text" class="form-control" name="nomEtd" required >
         </div>
         <div class="mb-3">
             <label for="prenom" class="form-label">Prenom de L'étudiant</label>
-            <input type="text" class="form-control"  name="pnomEtd" >
+            <input type="text" class="form-control"  name="pnomEtd" required >
         </div>
         <div class="mb-3">
             <label for="age" class="form-label">Email</label>
-            <input type="text" class="form-control" name="emailEtd" >
+            <input type="text" class="form-control" name="emailEtd" required >
         </div>
         <div class="mb-3">
             <label for="age" class="form-label">Filière</label>
-            <input type="text" class="form-control" name="filiEtd" >
+            <input type="text" class="form-control" name="filiEtd"  required>
         </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>

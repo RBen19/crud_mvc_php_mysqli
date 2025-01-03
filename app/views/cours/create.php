@@ -9,20 +9,23 @@
     <title>Document</title>
 </head>
 <body>
-<button type="button" class="btn btn-outline-secondary"><a href="?action=voirCours" style="color: black">Liste des cours</a>
-</button><div class="container mt-5">
+<div class="d-flex justify-content-left mt-5">
+        <button type="button" class="btn btn-outline-secondary"><a href="?action=voirCours" style="color: black" class="text-decoration-none">Liste des cours</a>
+        </button>
+</div>
+    <div class="container mt-5">
     <form action="?action=creerCours" METHOD="post">
         <div class="mb-4">
             <label for="nom" class="form-label">Nom du Cours</label>
-            <input type="text" class="form-control" name="nomC" >
+            <input type="text" class="form-control" name="nomC" required>
         </div>
         <div class="mb-4">
             <label for="prenom" class="form-label">Code Du Cours</label>
-            <input type="text" class="form-control"  name="CodeC" >
+            <input type="text" class="form-control"  name="CodeC" required>
         </div>
         <div class="mb-4">
             <label for="age" class="form-label">Nombre d'heures</label>
-            <input type="number" class="form-control" name="nbrHeureC" >
+            <input type="number" class="form-control" name="nbrHeureC" required>
         </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>

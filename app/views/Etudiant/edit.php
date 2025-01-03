@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-<button type="button" class="btn btn-outline-secondary"><a href="?action=voirEtudiants">Voir la liste des Etudiants</a></button>
+<button type="button" class="btn btn-outline-secondary"><a href="?action=voirEtudiants" class="text-decoration-none">Voir la liste des Etudiants</a></button>
 
 <div class="container mt-5">
     <?php while($etudiant = mysqli_fetch_assoc($etd)): ?>
@@ -18,19 +18,19 @@
         <input type="hidden" value="<?=$etudiant["id"]?>" name="idEtd">
         <div class="mb-3">
             <label for="nom" class="form-label">Nom de L'étudiant</label>
-            <input type="text" class="form-control" name="nomEtd"  value="<?= $etudiant["nomEtd"] ?>">
+            <input type="text" class="form-control" name="nomEtd"  value="<?= $etudiant["nomEtd"] ?>" required>
         </div>
         <div class="mb-3">
             <label for="prenom" class="form-label">Prenom de L'étudiant</label>
-            <input type="text" class="form-control"  name="pnomEtd" value="<?= $etudiant["prenomEtd"] ?>" >
+            <input type="text" class="form-control"  name="pnomEtd" value="<?= $etudiant["prenomEtd"] ?>" required>
         </div>
         <div class="mb-3">
             <label for="age" class="form-label">Email</label>
-            <input type="text" class="form-control" name="emailEtd" value="<?= $etudiant["mailEtd"] ?>" >
+            <input type="text" class="form-control" name="emailEtd" value="<?= $etudiant["mailEtd"] ?>" required>
         </div>
         <div class="mb-3">
             <label for="age" class="form-label">Filière</label>
-            <input type="text" class="form-control" name="filiEtd" value="<?= $etudiant["filiereEtd"] ?>" >
+            <input type="text" class="form-control" name="filiEtd" value="<?= $etudiant["filiereEtd"] ?>" required>
         </div>
         <button type="submit" class="btn btn-primary">Modifier</button>
     </form>

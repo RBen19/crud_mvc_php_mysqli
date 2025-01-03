@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<button type="button" class="btn btn-outline-secondary"><a href="?action=voirCours" style="color: black">Liste des cours</a>
+<button type="button" class="btn btn-outline-secondary"><a href="?action=voirCours" style="color: black" class="text-decoration-none">Liste des cours</a>
 </button><div class="container mt-5">
         <?php
         while ($cour = mysqli_fetch_assoc($cours)):
@@ -18,15 +18,15 @@
         <input type="hidden" name="idC" value="<?= $cour["idcours"] ?>">
         <div class="mb-4">
             <label for="nom" class="form-label">Nom du Cours</label>
-            <input type="text" class="form-control" name="nomC" value="<?= $cour["NomCours"] ?>"   >
+            <input type="text" class="form-control" name="nomC" value="<?= $cour["NomCours"] ?>"   required>
         </div>
         <div class="mb-4">
             <label for="prenom" class="form-label">Code Du Cours</label>
-            <input type="text" class="form-control"  name="CodeC"  value="<?=$cour["CodeCours"]?>">
+            <input type="text" class="form-control"  name="CodeC"  value="<?=$cour["CodeCours"]?>" required>
         </div>
         <div class="mb-4">
             <label for="age" class="form-label">Nombre d'heures</label>
-            <input type="number" class="form-control" name="nbrHeureC"  value="<?=$cour["nbrHeureCours"]?>">
+            <input type="number" class="form-control" name="nbrHeureC"  value="<?=$cour["nbrHeureCours"]?>" required>
         </div>
         <button type="submit" class="btn btn-primary">Modifier</button>
     </form>
